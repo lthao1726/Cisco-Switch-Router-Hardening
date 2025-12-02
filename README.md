@@ -30,8 +30,7 @@
 <p align="left">
 SOHO Network:
 
-<[<img width="1580" height="884" alt="image" src="https://github.com/user-attachments/assets/00f7b73f-0dfd-430a-bfaf-dcfcf03c9a2f" />](https://i.imgur.com/ejQSMsl.png)](https://i.imgur.com/ejQSMsl.png)
->
+[<img width="1580" height="884" alt="image" src="https://github.com/user-attachments/assets/00f7b73f-0dfd-430a-bfaf-dcfcf03c9a2f" />](https://i.imgur.com/ejQSMsl.png)]
 
 Step 1: As the first step, we will implementing the Cisco Switch's basic system identity and security.
 
