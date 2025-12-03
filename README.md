@@ -107,9 +107,9 @@ Step 7: Dynamic ARP Inspection   <br/>
 <br />
 Step 8: Storm Control   <br/>
 
-- <br>storm-control broadcast level 10 </b>
-- <br>storm-control multicast level 10 (unsupported) </b>
-- <br>storm-control unicast level 10 (unsupported) </b>
+- <b>storm-control broadcast level 10 </b>
+- <b>storm-control multicast level 10 (unsupported) </b>
+- <b>storm-control unicast level 10 (unsupported) </b>
 
 <img width="898" height="195" alt="image" src="https://github.com/user-attachments/assets/0b8650e3-17a2-49a7-8a43-c6376d2e90be" />
 
