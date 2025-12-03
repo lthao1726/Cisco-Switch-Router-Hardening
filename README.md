@@ -24,7 +24,7 @@
 - <b>Secure Unused Ports (VLAN 999) </b>
 - <b>Verify all Running-Config </b>
 
-<h2>Program walk-through:</h2>
+<h2>Cisco Switch walk-through:</h2>
 
 <p align="left">
 SOHO Network:
@@ -146,6 +146,77 @@ Step 11: Finally we verify our switch configuration <br/>
 <br />
 <br />
 
+<h2>Technologies Implemented </h2>
+
+- <b>Console access </b>
+- <b>VTY (remote) access </b>
+- <b>Password security </b>
+- <b>User Accounts </b>
+- <b>SSH </b>
+- <b>Disable unused services </b>
+- <b>Secure routing updates (simple auth) </b>
+- <b>Disable unused ports </b>
+- <b>Logging + Banner</b>
+- <b>Verify Router Configuration </b>
+
+<h2>Cisco Router walk-through:</h2>
+
+Step 1: Enable the Cisco Router and setup basic system identity and security.
+
+- <b>interface gig0/0 </b>
+- <b>no shutdown </b>
+  
+<img width="886" height="410" alt="image" src="https://github.com/user-attachments/assets/a37086de-c96f-4d8a-a58e-ef3ccd380340" />
+
+- <b>hostname </b>
+- <b>no ip domain-lookup </b>
+- <b>ip domain-name </b>
+- <b>password-encryption </b>
+- <b>enable secret </b>
+- <b>line console 0 </b>
+- <b>login </b>
+
+<img width="716" height="414" alt="image" src="https://github.com/user-attachments/assets/1070b039-86f3-4409-ae86-035b0e898337" />
+
+<br />
+<br />
+Step 2: Implementing Secure Management Access (SSH + VTY hardening and Banner motd)
+
+ - <b>line vty 0 4 </b>
+ - <b>password </b>
+ - <b>login local </b>
+ - <b>transport input ssh </b>
+ - <b>crypto key generate rsa keys modulus 2048 </b>
+ - <b>ip ssh version 2 </b>
+ - <b>banner motd </b>
+ 
+<img width="763" height="342" alt="image" src="https://github.com/user-attachments/assets/e91a11bf-063a-4123-8bbd-18facdca36ee" />
+
+<br />
+<br />
+Step 3: Disabling unused services, ports and protect routing protocols  <br/>
+
+- <b>no ip http server (unsupported) </b>
+- <b>interface; shutdown </b>
+- <b>router ospf 1 </b>
+- <b>ip ospf message-digest-key 1 md5 BAT123 </b>
+- <b>ip ospf authentication message-digest </b>
+- <b>key cahin EIGRP-KEYS </b>
+- <b>key-string BAT123 </B>
+- <b>service timstamps log datetime msec </b>
+
+<img width="767" height="674" alt="image" src="https://github.com/user-attachments/assets/10786e04-0ad3-4f8e-8a02-c5fef5152030" />
+
+Step 4: Verify Cisco Router Configuration <br>
+
+- <b>show running-config </b>
+<img width="756" height="445" alt="image" src="https://github.com/user-attachments/assets/8b7c30bb-d0e5-4c73-b9cb-220e042529b9" />
+<img width="764" height="705" alt="image" src="https://github.com/user-attachments/assets/0a7d377b-da45-4454-bbb9-f5c83777a05b" />
+<img width="752" height="706" alt="image" src="https://github.com/user-attachments/assets/e59c6b4b-5b05-4e0d-a904-615d2c3a448b" />
+
+
+<br />
+<br />
 
 <!--
  ```diff
